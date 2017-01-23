@@ -71,7 +71,6 @@ export default {
   },
   methods: {
     _updateMask (ev) {
-      console.log(ev.target.value)
       if (ev.target.value.length > 14) {
         this.mask = '99.999.999/9999-99'
       } else {
