@@ -31,27 +31,6 @@
     <code>
         &lt; input type="text" v-mask="'99/99/9999'" &gt;
     </code>
-    <div class="mdl-textfield mdl-js-textfield">
-      <input v-mask="mask" @input="_updateMask" class="mdl-textfield__input" type="text" id="sample3">
-      <label class="mdl-textfield__label" for="sample3">TaxDocument</label>
-    </div>
-    <p>HTML</p>
-    <code>
-        &lt; input v-mask="mask" @input="_updateMask" &gt;
-    </code>
-    <p>Vue.js</p>
-    <code>
-      methods: {
-        _updateMask (ev) {
-          console.log(ev.target.value)
-          if (ev.target.value.length > 14) {
-            this.mask = '99.999.999/9999-99'
-          } else {
-            this.mask = '999.999.999-999'
-          }
-        }
-      }
-    </code>
   </div>
 </template>
 
@@ -63,20 +42,6 @@ export default {
   name: 'app',
   components: {
     Hello
-  },
-  data () {
-    return {
-      mask: '999.999.999-99'
-    }
-  },
-  methods: {
-    _updateMask (ev) {
-      if (ev.target.value.length > 14) {
-        this.mask = '99.999.999/9999-99'
-      } else {
-        this.mask = '999.999.999-999'
-      }
-    }
   },
   directives: {
     'mask': AwesomeMask
@@ -91,7 +56,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px 0;
 }
 .mdl-textfield{
   display: block !important;
