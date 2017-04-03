@@ -23,7 +23,13 @@
     <code>
         &lt; input type="text" v-mask="'999.999.999-99'" &gt;
     </code>
-
+    <div class="mdl-textfield mdl-js-textfield">
+      <input v-mask="'money'" class="mdl-textfield__input" type="text" id="sample4">
+      <label class="mdl-textfield__label" for="sample4">Money</label>
+    </div>
+    <code>
+        &lt; input type="text" v-mask="'money'" &gt;
+    </code>
     <div class="mdl-textfield mdl-js-textfield">
       <input v-mask="'99/99/9999'" class="mdl-textfield__input" type="text" id="sample3">
       <label class="mdl-textfield__label" for="sample3">Date</label>

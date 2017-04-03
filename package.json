@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "awesome-mask": "^0.4.2",
+    "awesome-mask": "^0.5.0",
     "vue": "^2.1.0"
   },
   "devDependencies": {
