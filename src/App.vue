@@ -25,11 +25,22 @@
     </code>
     <div class="mdl-textfield mdl-js-textfield">
       <input v-mask="'money'" class="mdl-textfield__input" type="text" id="sample4">
+
       <label class="mdl-textfield__label" for="sample4">Money</label>
     </div>
     <code>
         &lt; input type="text" v-mask="'money'" &gt;
     </code>
+
+
+    <div class="mdl-textfield mdl-js-textfield">
+      <input type="text" class="mdl-textfield__input" v-model="price" id="sample5" v-mask="'money'">
+      <label class="mdl-textfield__label" for="sample5">Money with v-model</label>
+    </div>
+    <code>
+        &lt; input  v-model="price type="text" v-mask="'money'" &gt;
+    </code>
+
     <div class="mdl-textfield mdl-js-textfield">
       <input v-mask="'99/99/9999'" class="mdl-textfield__input" type="text" id="sample3">
       <label class="mdl-textfield__label" for="sample3">Date</label>
@@ -72,7 +83,8 @@ export default {
   },
   data () {
     return {
-      mask: '999.999.999-99'
+      mask: '999.999.999-99',
+      price: 20
     }
   },
   methods: {
