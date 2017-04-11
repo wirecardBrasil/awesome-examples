@@ -34,7 +34,7 @@
 
 
     <div class="mdl-textfield mdl-js-textfield">
-      <input type="text" class="mdl-textfield__input" v-model="price" id="sample5" v-mask="'money'">
+      <input @input="bla" type="text" class="mdl-textfield__input" v-model="price" id="sample5" v-mask="'money'">
       <label class="mdl-textfield__label" for="sample5">Money with v-model</label>
     </div>
     <code>
@@ -94,6 +94,9 @@ export default {
       } else {
         this.mask = '999.999.999-999'
       }
+    },
+    bla (ev) {
+      console.log(ev.target.value)
     }
   },
   directives: {
