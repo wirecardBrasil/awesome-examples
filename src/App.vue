@@ -84,11 +84,12 @@ export default {
   data () {
     return {
       mask: '999.999.999-99',
-      price: 20
+      price: -20
     }
   },
   methods: {
     _updateMask (ev) {
+      console.log(ev.target.value)
       if (ev.target.value.length > 14) {
         this.mask = '99.999.999/9999-99'
       } else {
@@ -96,7 +97,7 @@ export default {
       }
     },
     bla (ev) {
-      console.log(ev.target.value)
+      // console.log(ev.target.value)
     }
   },
   directives: {
